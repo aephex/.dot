@@ -1,0 +1,28 @@
+font:
+  size: {{ fonts.terminal.size }}
+  normal:
+    family: {{ fonts.terminal.family }}
+  glyph_offset:
+    x: {{ glyphs.offset.x }}
+    y: {{ glyphs.offset.y }}
+
+colors:
+  primary:
+    background: "{{ colors.background.normal }}"
+    foreground: "{{ colors.foreground.normal }}"
+  normal:
+    black:     "{{ colors.black }}"
+    red:       "{{ colors.red }}"
+    green:     "{{ colors.green }}"
+    yellow:    "{{ colors.yellow }}"
+    blue:      "{{ colors.blue }}"
+    magenta:   "{{ colors.magenta }}"
+    cyan:      "{{ colors.cyan }}"
+    white:     "{{ colors.white }}"
+
+window:
+  opacity: {{ opacity.terminal }}
+  dynamic_padding: {{ padding.terminal.dynamic }}
+  padding:
+    x: {{ padding.terminal.x }}
+    y: {{ padding.terminal.y }}

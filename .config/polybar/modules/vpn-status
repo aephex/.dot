@@ -1,0 +1,9 @@
+[module/vpn-status]
+type = custom/script
+
+interval = 3
+exec = ~/.config/polybar/scripts/vpn-status;
+
+format-prefix = " "
+format-prefix-foreground = ${colors.background-selected}
+format-prefix-font = 2

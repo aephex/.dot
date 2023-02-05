@@ -1,0 +1,14 @@
+# Aliases go here only to make it easiest to manage.
+# You can source this from your shell's config file.
+
+# Common/Shell
+alias cp='cp -i'                   # Confirm before overwriting 
+alias ll='exa -lag --git --group-directories-first --icons'
+alias ls='ls --color=auto'
+
+# Personal config management
+alias dot='$(which git) --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias sys='$(which git) --git-dir=$HOME/.system --work-tree=$HOME'
+
+# Docker
+alias dps='docker ps --format "table {{.ID}}\t{{.Status}}\t{{.Names}}"'

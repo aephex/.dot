@@ -1,0 +1,16 @@
+[module/volume]
+type = internal/pulseaudio
+
+sink = alsa_output.pci-0000_12_00.3.analog-stereo
+use-ui-max = true
+
+interval = 5
+
+label-volume = %percentage%%
+label-muted =  muted
+
+format-volume = <label-volume>
+
+format-volume-prefix = " "
+format-volume-prefix-foreground = ${colors.background-selected}
+format-volume-prefix-font = 2

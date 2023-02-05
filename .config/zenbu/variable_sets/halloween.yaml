@@ -1,0 +1,12 @@
+colors:
+  background:
+    normal:     "#000000"
+
+  black:        "#222222"
+  red:          "#ff4e53"
+  green:        "#99ff78"
+  yellow:       "#d06700"
+  blue:         "#faafff"
+  magenta:      "#c397d8"
+  cyan:         "#70cdca"
+  white:        "#eaeaea" 

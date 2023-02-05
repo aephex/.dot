@@ -1,0 +1,7 @@
+[module/calendar]
+type = custom/script
+interval = 1
+
+exec = ~/.config/polybar/scripts/popup-calendar.sh
+
+click-left = ~/.config/polybar/scripts/popup-calendar.sh --popup &

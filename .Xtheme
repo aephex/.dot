@@ -1,0 +1,35 @@
+*fading:                          8
+*fadeColor:                       black
+*pointerColorBackground:          #444444
+*pointerColorForeground:          #cccccc
+
+*foreground: #eaeaea
+*background: #07121F
+*cursorColor: #eaeaea
+
+*color0: #07121F
+*color8: #07121F
+
+*color1: #FF6261
+*color9: #FF6261
+
+*color2: #42A899 
+*color10: #42A899 
+
+*color3: #E3AF54
+*color11: #E3AF54
+
+*color4: #2D9DE8
+*color12: #2D9DE8
+
+*color5: #BD95FF
+*color13: #BD95FF
+
+*color6: #77E0D6
+*color14: #77E0D6
+
+*color7: #eaeaea
+*color15: #eaeaea
+
+Xcursor.theme: xcursor-breeze
+Xcursor.size: 24

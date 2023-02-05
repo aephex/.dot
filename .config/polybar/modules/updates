@@ -1,0 +1,9 @@
+[module/updates]
+type = custom/script
+
+interval = 900
+exec = ~/.config/polybar/scripts/updates
+
+format-prefix = " "
+format-prefix-foreground = ${colors.background-selected}
+format-prefix-font = 2

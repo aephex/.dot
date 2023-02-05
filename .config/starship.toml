@@ -1,0 +1,59 @@
+format = '$username$hostname$sudo$jobs$status$directory$git_branch$git_status$character'
+right_format = '$cmd_duration$all'
+#add_newline = false
+command_timeout = 500
+scan_timeout = 500
+
+[custom.magento]
+style = "red bold"
+symbol = " "
+command = 'grep version composer.json | head -n1 | cut -d\" -f4'
+when = "grep magento composer.json"
+
+[custom.drupal]
+style = "blue bold"
+symbol = " "
+command = 'echo $(grep "drupal/core-recommended" composer.json || grep "drupal/core" composer.json) | head -n1 | cut -d\" -f4 | tr -d "^~"'
+when = "grep 'drupal/core' composer.json"
+
+[aws]
+format ="[$symbol($profile )(\\($region\\) )(\\[$duration\\] )]($style)"
+
+[character]
+success_symbol = "[>](bold green)"
+error_symbol = "[>](bold red)"
+
+[directory]
+read_only = " "
+
+[docker_context]
+format = "[$symbol $context](blue bold)"
+symbol = "🐋"
+
+[git_branch]
+format = "[$symbol $branch]($style) "
+symbol = ""
+
+[kubernetes]
+disabled = false
+style = "blue bold"
+format = '[$symbol$context ]($style)'
+
+[line_break]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[package]
+disabled = true
+
+[php] 
+disabled = true
+
+[python]
+disabled = true
+
+[username]
+format = "[$user ]($style)"
+style_root = "bold yellow"

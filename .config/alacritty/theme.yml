@@ -1,0 +1,28 @@
+font:
+  size: 10
+  normal:
+    family: HasklugNerdFontMono
+  glyph_offset:
+    x: 0
+    y: -1
+
+colors:
+  primary:
+    background: "#07121F"
+    foreground: "#eaeaea"
+  normal:
+    black:     "#07121F"
+    red:       "#FF6261"
+    green:     "#42A899"
+    yellow:    "#E3AF54"
+    blue:      "#2D9DE8"
+    magenta:   "#BD95FF"
+    cyan:      "#77E0D6"
+    white:     "#eaeaea"
+
+window:
+  opacity: 0.91
+  dynamic_padding: true
+  padding:
+    x: 16
+    y: 16

@@ -1,0 +1,9 @@
+[module/fanspeed]
+type = custom/script
+
+interval = 15
+exec = "~/.config/polybar/scripts/fanspeed.sh duty"
+
+format-prefix = " "
+format-prefix-foreground = ${colors.background-selected}
+format-prefix-font = 2

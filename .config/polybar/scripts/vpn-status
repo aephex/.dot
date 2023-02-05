@@ -1,0 +1,20 @@
+#!/bin/bash
+
+wireguard_active_interface="$(wg show 2>&1 | awk '{ print $5 }')"
+if ! wg show 2>/dev/null; then
+    if [[ "${wireguard_active_interface}" ]]; then
+        echo "${wireguard_active_interface//:*}"
+        exit 0
+    fi
+fi
+
+vpnc_active_pid="$(ls /var/run/vpn*.pid 2>/dev/null)"
+if [[ "${vpnc_active_pid}" ]]; then
+    vpn="${vpnc_active_pid%%.*}"
+    vpn="${vpn##*/}"
+    vpn="${vpn##*-}"
+    echo "${vpn}"
+    exit 0
+fi
+
+exit 1

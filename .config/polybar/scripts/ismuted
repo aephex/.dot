@@ -1,0 +1,8 @@
+#!/bin/bash
+ismuted="$(pactl get-source-mute "$(pactl get-default-source)" | awk '{print $2}')"
+
+if [ "${ismuted// /}" = "yes" ]; then
+    echo -n '' # Muted microphone icon
+else
+    echo
+fi

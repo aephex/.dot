@@ -1,0 +1,10 @@
+[module/cpu]
+type = internal/cpu
+
+interval = 1
+
+label = %percentage%%
+
+format-prefix = " "
+format-prefix-foreground = ${colors.background-selected}
+format-prefix-font = 2

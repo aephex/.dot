@@ -1,0 +1,35 @@
+*fading:                          8
+*fadeColor:                       black
+*pointerColorBackground:          {{ colors.greys.dark }}
+*pointerColorForeground:          {{ colors.greys.light }}
+
+*foreground: {{ colors.white }}
+*background: {{ colors.black }}
+*cursorColor: {{ colors.white }}
+
+*color0: {{ colors.black }}
+*color8: {{ colors.black }}
+
+*color1: {{ colors.red }}
+*color9: {{ colors.red }}
+
+*color2: {{ colors.green }} 
+*color10: {{ colors.green }} 
+
+*color3: {{ colors.yellow }}
+*color11: {{ colors.yellow }}
+
+*color4: {{ colors.blue }}
+*color12: {{ colors.blue }}
+
+*color5: {{ colors.magenta }}
+*color13: {{ colors.magenta }}
+
+*color6: {{ colors.cyan }}
+*color14: {{ colors.cyan }}
+
+*color7: {{ colors.white }}
+*color15: {{ colors.white }}
+
+Xcursor.theme: {{ cursor.theme }}
+Xcursor.size: {{ cursor.size }}

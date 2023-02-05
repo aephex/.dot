@@ -1,0 +1,9 @@
+[module/cputemp]
+type = custom/script
+
+interval = 5
+exec = "~/.config/polybar/scripts/temperature.sh"
+
+format-prefix = " "
+format-prefix-foreground = ${colors.background-selected}
+format-prefix-font = 2

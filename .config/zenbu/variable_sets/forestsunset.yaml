@@ -1,0 +1,91 @@
+fonts:
+  sans:
+    family: "HasklugNerdFontMono"
+    size: 10
+  serif:
+    family: "URWGothic-Book"
+    size: 11
+  icons:
+    family: "MaterialIcons"
+    size: 13
+
+  terminal:
+    family: "{{ fonts.sans.family }}"
+    size: "{{ fonts.sans.size }}"
+  wm:
+    family: "SourceCodePro"
+    size: 10
+
+colors:
+  black: "#07121F"
+  red: "#FF6261"
+  green: "#42A899"
+  yellow: "#E3AF54"
+  blue: "#2D9DE8"
+  magenta: "#BD95FF"
+  cyan: "#77E0D6"
+  white: "#eaeaea"
+
+  greys:
+    light: "#cccccc"
+    normal: "#7e807e"
+    dark: "#444444"
+
+  background:
+    normal: "{{ colors.black }}"
+    selected: "{{ colors.yellow }}"
+    inactive: "{{ colors.black }}"
+
+  foreground:
+    normal: "{{ colors.white }}"
+    selected: "{{ colors.black }}"
+    inactive: "{{ colors.greys.normal }}"
+
+  borders:
+    selected: "{{ colors.yellow }}"
+    inactive: "{{ colors.black }}"
+
+wallpapers:
+  all: false
+  left:
+    path: "/data/library/images/wallpapers/vector-forest-sunset-forest-sunset-forest-wallpaper-b3abc35d0d699b056fa6b247589b18a8.jpg"
+    mode: 5
+  right:
+    path: "/data/library/images/wallpapers/vector-forest-sunset-forest-sunset-forest-wallpaper-b3abc35d0d699b056fa6b247589b18a8.jpg"
+    mode: 5
+
+opacity:
+  active: 1
+  inactive: 1
+  terminal: 0.91
+  tooltips: 0.91
+
+padding:
+  global: 8
+  terminal:
+    dynamic: "true"
+    x: 16
+    y: 16
+
+gaps:
+  smart: "on"
+  inner: 8
+  outer: 0
+
+borders:
+  smart: "on"
+  size: 2
+
+corners:
+  radius: 0
+
+shadows:
+  enabled: "false"
+
+fading:
+  enabled: "false"
+
+glyphs:
+  offset:
+    x: 0
+    y: -1

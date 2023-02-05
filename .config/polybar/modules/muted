@@ -1,0 +1,7 @@
+[module/muted]
+type = custom/script
+interval = 1
+
+exec = ~/.config/polybar/scripts/ismuted
+
+format-foreground = ${colors.background-selected}

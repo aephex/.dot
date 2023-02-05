@@ -1,0 +1,30 @@
+[section/base]
+include-file = /home/$USER/.config/polybar/theme
+
+include-file = /home/$USER/.config/polybar/modules/i3
+include-file = /home/$USER/.config/polybar/modules/mpd
+include-file = /home/$USER/.config/polybar/modules/calendar
+include-file = /home/$USER/.config/polybar/modules/cpu
+include-file = /home/$USER/.config/polybar/modules/vpn-status
+include-file = /home/$USER/.config/polybar/modules/volume
+include-file = /home/$USER/.config/polybar/modules/title
+include-file = /home/$USER/.config/polybar/modules/updates
+include-file = /home/$USER/.config/polybar/modules/muted
+include-file = /home/$USER/.config/polybar/modules/fanspeed
+include-file = /home/$USER/.config/polybar/modules/cputemp
+
+[bar/master]
+modules-left = i3 vpn-status muted
+modules-center = title
+modules-right = mpd fanspeed cputemp cpu volume updates calendar
+
+[bar/left]
+inherit = bar/master
+monitor = DP-0
+tray-position = right
+
+[bar/right]
+inherit = bar/master
+monitor = HDMI-0
+
+;modules-right = calendar

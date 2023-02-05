@@ -1,0 +1,8 @@
+[module/mpd]
+type = internal/mpd
+interval = 1
+
+format-online = <label-song> <label-time>
+
+label-song = %title% - %artist% (%album%)
+label-time = - %elapsed% / %total%
