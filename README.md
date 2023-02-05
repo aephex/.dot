@@ -6,6 +6,7 @@ If something is missing, let me know, had to move around a bunch of scripts to k
 
 ## Todo
 
+- [ ] Add info about how to use bare repos
 - [ ] Clean up i3 keymaps
 - [ ] Describe monitor setup and how to change it (tl;dr assumes two)
 - [ ] Describe which apps are themed and how they are related
