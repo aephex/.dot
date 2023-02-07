@@ -12,8 +12,7 @@ i3-status
 jq
 liquidctl
 maim
-mpd
-ncmpcpp
+mpc
 neofetch
 neovim
 nerd-fonts-complete
@@ -24,10 +23,8 @@ perl
 picom
 polybar
 powerline-fonts
-pulseaudio
 python3
 pywal-git
-qutebrowser
 ranger
 rg
 sensors
