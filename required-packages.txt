@@ -4,6 +4,7 @@ ctags
 dmenu
 exa
 fd
+git
 htop
 i3-wm
 i3-scrot
@@ -37,4 +38,3 @@ xdotool
 yad
 zathura
 zenbu-git
-zsh
