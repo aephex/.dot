@@ -21,11 +21,9 @@ map("n", "<leader>q", cmd.bdelete, { desc = 'Close current buffer' })
 map("n", "<leader>Q", ":bdelete!<CR>", { desc = 'Force close current buffer' })
 map("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true, desc = 'Make current file executable' })
 map("n", "<leader>f", vim.lsp.buf.format, { desc = 'Format buffer using LSP' })
-map("n", "<F3>", cmd.E, { desc = 'Open Explorer (NetRW)' })
-
--- Quality of Life
-map("i", "<C-c>", "<Esc>")
-map("n", "Q", "<nop>") -- disable shift+q
+-- map("n", "<F3>", cmd.E, { desc = 'Open Explorer (NetRW)' })
+-- map("n", "<F3>", ts.extensions.file_browser.file_browser, { desc = 'Open Explorer (Telescope)' })
+map("n", "<F3>", cmd.RnvimrToggle, { desc = 'Open Explorer (Ranger)' })
 
 -- moving
 map("n", "<C-d>", "<C-d>zz", { desc = 'Half page down, keep view centered' })
@@ -36,6 +34,18 @@ map("n", "N", "Nzzzv", { desc = 'Previous result, keep view centered' })
 -- Move Selections
 map("v", "J", ":m '>+1<CR>gv=gv", { desc = 'Move selection down' })
 map("v", "K", ":m '<-2<CR>gv=gv", { desc = 'Move selection up' })
+
+-- Notes
+-- All assume you are in the correct CWD
+-- use Telescope/Projects keybinds below to ensure this
+-- or set it with something like `:cd %:h` from an existing note
+map('n', '<leader>gn', ":find index.md<CR><ESC>", { desc = '[g]o to [n]otes index' })
+map('n', '<leader>nn', ":tabe .md | silent !mkdir -p %:p:h<C-b><C-Right><Right>", { desc = '[n]ew [n]ote: ' })
+map('n', '<leader>ni', "i<C-r>=map(glob('**/*', 0, 1), 'join([\"- \", v:val])')<CR>", { desc = 'generate [n]otes [i]ndex inline' })
+
+-- Quality of Life
+map("i", "<C-c>", "<Esc>")
+map("n", "Q", "<nop>") -- disable shift+q
 
 -- Search & Replace
 map("n", "<C-h>", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = 'Replace occurences of word' })

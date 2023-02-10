@@ -1,12 +1,16 @@
 local ts = require('telescope')
 
 local enabled_extensions = {
+    'file_browser',
     'projects',
     'repo',
 }
 
 ts.setup {
     extensions = {
+        file_browser = {
+            hijack_netrw = true
+        },
         repo = {
             list = {
                 fd_opts = {

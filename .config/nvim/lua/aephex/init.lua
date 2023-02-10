@@ -1,3 +1,3 @@
-require("aephex.keymaps")
-require("aephex.options")
 require("aephex.packer")
+require("aephex.options")
+require("aephex.keymaps")

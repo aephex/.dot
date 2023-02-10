@@ -11,7 +11,8 @@ return require('packer').startup(function(use)
 
             -- Telescope Extensions
             'cljoly/telescope-repo.nvim',
-            'ahmedkhalf/project.nvim'
+            'ahmedkhalf/project.nvim',
+            'nvim-telescope/telescope-file-browser.nvim'
         }
     }
 
@@ -20,6 +21,7 @@ return require('packer').startup(function(use)
     use { 'mbbill/undotree' }
     use { 'norcalli/nvim-colorizer.lua' }
     use { 'tpope/vim-fugitive' }
+    use { 'kevinhwang91/rnvimr' }
 
     -- Statusline / Tabline
     use { 'nvim-lualine/lualine.nvim',
@@ -38,12 +40,14 @@ return require('packer').startup(function(use)
     use { 'rose-pine/neovim', as = 'rose-pine' }
 
     -- LSP
+    -- Treesitter; like DOM+magic for any document
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use { 'nvim-treesitter/playground' }
 
+    -- LSP-Zero; because configuring things can be automatic
     use { 'VonHeikemen/lsp-zero.nvim',
         requires = {
-            -- LSP Support
+            -- Installation/Configuration Support
             { 'neovim/nvim-lspconfig' },
             { 'williamboman/mason.nvim' },
             { 'williamboman/mason-lspconfig.nvim' },
@@ -53,6 +57,8 @@ return require('packer').startup(function(use)
 
             -- Snippet Support
             { 'L3MON4D3/LuaSnip' },
+
+            -- You complete (me) snippets
             { 'saadparwaiz1/cmp_luasnip' },
 
             -- Completions
@@ -62,7 +68,6 @@ return require('packer').startup(function(use)
             { 'hrsh7th/cmp-nvim-lsp' },
             { 'hrsh7th/cmp-nvim-lsp-signature-help' },
             { 'hrsh7th/cmp-nvim-lua' },
-
             { 'folke/neodev.nvim' },
 
             -- Snippets
