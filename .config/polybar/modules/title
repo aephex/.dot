@@ -7,7 +7,7 @@ format-foreground = ${colors.foreground}
 format-padding = 4
 
 label = %title%
-label-maxlen = 36
+label-maxlen = 64
 
 label-empty = Empty
 label-empty-foreground = ${colors.foreground}
