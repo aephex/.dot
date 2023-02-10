@@ -40,7 +40,7 @@ map("v", "K", ":m '<-2<CR>gv=gv", { desc = 'Move selection up' })
 -- use Telescope/Projects keybinds below to ensure this
 -- or set it with something like `:cd %:h` from an existing note
 map('n', '<leader>gn', ":find index.md<CR><ESC>", { desc = '[g]o to [n]otes index' })
-map('n', '<leader>nn', ":tabe .md | silent !mkdir -p %:p:h<C-b><C-Right><Right>", { desc = '[n]ew [n]ote: ' })
+map('n', '<leader>nn', ":tabe .md | silent !mkdir -p %:p:h<C-b><C-Right><Right>", { desc = '[n]ew [n]ote' })
 map('n', '<leader>ni', "i<C-r>=map(glob('**/*', 0, 1), 'join([\"- \", v:val])')<CR>", { desc = 'generate [n]otes [i]ndex inline' })
 
 -- Quality of Life
