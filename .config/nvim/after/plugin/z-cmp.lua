@@ -1,24 +1,18 @@
-local has_words_before = function()
-    ---@diagnostic disable-next-line: deprecated
-    unpack = unpack or table.unpack
-    local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-    return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
-end
-
 local luasnip = require("luasnip")
 local cmp = require("cmp")
 
+local config = cmp.get_config()
+
 cmp.setup({
+    formatting = {
+        fields = { "menu", "abbr", "kind" },
+    },
     mapping = {
         ["<Tab>"] = cmp.mapping(function(fallback)
             if luasnip.expand_or_jumpable() then
                 luasnip.expand_or_jump()
             elseif cmp.visible() then
                 cmp.select_next_item()
-                -- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable()
-                -- they way you will only jump inside the snippet region
-            elseif has_words_before() then
-                cmp.complete()
             else
                 fallback()
             end
@@ -33,5 +27,11 @@ cmp.setup({
                 fallback()
             end
         end, { "i", "s" }),
+    },
+    sources = vim.list_extend(config.sources, {
+        { name = 'nerdfont' },
+    }, 1, #config.sources),
+    window = {
+        documentation = cmp.config.window.bordered(),
     }
 })

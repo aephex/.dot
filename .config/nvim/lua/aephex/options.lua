@@ -37,4 +37,4 @@ opt.wrapscan = false
 opt.timeout = true
 opt.timeoutlen = 300
 
-opt.completeopt = 'menuone,noinsert,noselect'
+opt.completeopt = 'menu,menuone,noinsert,noselect'

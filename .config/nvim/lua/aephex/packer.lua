@@ -44,6 +44,7 @@ return require('packer').startup(function(use)
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use { 'nvim-treesitter/playground' }
 
+
     -- LSP-Zero; because configuring things can be automatic
     use { 'VonHeikemen/lsp-zero.nvim',
         requires = {
@@ -69,6 +70,7 @@ return require('packer').startup(function(use)
             { 'hrsh7th/cmp-nvim-lsp-signature-help' },
             { 'hrsh7th/cmp-nvim-lua' },
             { 'folke/neodev.nvim' },
+            { 'chrisgrieser/cmp-nerdfont' },
 
             -- Snippets
             { 'rafamadriz/friendly-snippets' },
