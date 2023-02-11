@@ -25,7 +25,7 @@ map("n", "<leader>f", vim.lsp.buf.format, { desc = 'Format buffer using LSP' })
 -- map("n", "<F3>", ts.extensions.file_browser.file_browser, { desc = 'Open Explorer (Telescope)' })
 map("n", "<F3>", cmd.RnvimrToggle, { desc = 'Open Explorer (Ranger)' })
 
--- moving
+-- Moving
 map("n", "<C-d>", "<C-d>zz", { desc = 'Half page down, keep view centered' })
 map("n", "<C-u>", "<C-u>zz", { desc = 'Half page up, keep view centered' })
 map("n", "n", "nzzzv", { desc = 'Next result, keep view centered' })
