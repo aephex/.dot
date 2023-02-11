@@ -22,8 +22,9 @@ vim.api.nvim_create_autocmd("FileType", {
 opt.backup = false
 opt.backupcopy = 'yes'
 opt.swapfile = false
-opt.undodir = os.getenv("HOME") .. "/.nvim/undodir"
 opt.undofile = true
+---@diagnostic disable-next-line: assign-type-mismatch
+opt.undodir = os.getenv("HOME") .. "/.nvim/undodir"
 
 -- Search
 opt.hlsearch = false
