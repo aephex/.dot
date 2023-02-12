@@ -35,7 +35,7 @@ map("n", "N", "Nzzzv", { desc = 'Previous result, keep view centered' })
 map("v", "J", ":m '>+1<CR>gv=gv", { desc = 'Move selection down' })
 map("v", "K", ":m '<-2<CR>gv=gv", { desc = 'Move selection up' })
 
--- Notes
+-- Notes / KB / Wiki / Todo
 -- All assume you are in the correct CWD
 -- use Telescope/Projects keybinds below to ensure this
 -- or set it with something like `:cd %:h` from an existing note

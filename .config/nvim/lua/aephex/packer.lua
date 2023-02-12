@@ -23,6 +23,7 @@ return require('packer').startup(function(use)
     use { 'tpope/vim-fugitive' }
     use { 'kevinhwang91/rnvimr' }
     use { 'windwp/nvim-autopairs', config = function() require("nvim-autopairs").setup {} end }
+    use { 'AckslD/nvim-FeMaco.lua', config = 'require("femaco").setup()' }
 
     -- Statusline / Tabline
     use { 'nvim-lualine/lualine.nvim',

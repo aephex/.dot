@@ -7,6 +7,7 @@ cmp.setup({
     formatting = {
         fields = { "menu", "abbr", "kind" },
     },
+
     mapping = {
         ["<Tab>"] = cmp.mapping(function(fallback)
             if luasnip.expand_or_jumpable() then
@@ -28,9 +29,11 @@ cmp.setup({
             end
         end, { "i", "s" }),
     },
+
     sources = vim.list_extend(config.sources, {
         { name = 'nerdfont' },
     }, 1, #config.sources),
+
     window = {
         documentation = cmp.config.window.bordered(),
     }
