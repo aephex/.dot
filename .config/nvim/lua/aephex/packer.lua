@@ -22,6 +22,7 @@ return require('packer').startup(function(use)
     use { 'norcalli/nvim-colorizer.lua' }
     use { 'tpope/vim-fugitive' }
     use { 'kevinhwang91/rnvimr' }
+    use { 'windwp/nvim-autopairs', config = function() require("nvim-autopairs").setup {} end }
 
     -- Statusline / Tabline
     use { 'nvim-lualine/lualine.nvim',
@@ -71,6 +72,9 @@ return require('packer').startup(function(use)
             { 'hrsh7th/cmp-nvim-lua' },
             { 'folke/neodev.nvim' },
             { 'chrisgrieser/cmp-nerdfont' },
+
+            -- Show signature help while typing
+            { 'ray-x/lsp_signature.nvim' },
 
             -- Snippets
             { 'rafamadriz/friendly-snippets' },

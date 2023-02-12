@@ -1,19 +1,9 @@
-local null_ls = require('null-ls')
-local lsp     = require("lsp-zero")
+local nls = require('null-ls')
+local lsp = require('lsp-zero')
+local sig = require('lsp_signature')
+local neo = require('neodev')
 
-require("neodev").setup()
-
-null_ls.setup({
-    sources = {
-        null_ls.builtins.code_actions.shellcheck,
-        null_ls.builtins.formatting.phpcbf,
-        null_ls.builtins.formatting.shfmt,
-        null_ls.builtins.formatting.yamlfmt,
-        null_ls.builtins.formatting.markdownlint,
-    }
-})
-
-lsp.preset("recommended")
+lsp.preset('recommended')
 
 lsp.setup_nvim_cmp({
     preselect = 'none',
@@ -44,8 +34,23 @@ lsp.set_preferences({
     }
 })
 
-lsp.setup()
-
 vim.diagnostic.config({
     virtual_text = true,
 })
+
+nls.setup({
+    sources = {
+        nls.builtins.code_actions.shellcheck,
+        nls.builtins.formatting.phpcbf,
+        nls.builtins.formatting.shfmt,
+        nls.builtins.formatting.yamlfmt,
+        nls.builtins.formatting.markdownlint,
+    }
+})
+
+sig.setup({
+    hint_enable = false
+})
+
+neo.setup()
+lsp.setup()
