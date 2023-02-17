@@ -20,11 +20,11 @@ modules-right = mpd fanspeed cputemp cpu volume updates calendar
 
 [bar/left]
 inherit = bar/master
-monitor = DP-0
+monitor = DP-2
 tray-position = right
 
 [bar/right]
 inherit = bar/master
-monitor = HDMI-0
+monitor = DP-0
 
 ;modules-right = calendar

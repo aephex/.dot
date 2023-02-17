@@ -1,3 +1,5 @@
+local session = require('nvim-possession')
+
 require('lualine').setup {
     options = {
         theme = 'auto',
@@ -42,5 +44,12 @@ require('lualine').setup {
                 'buffers',
             },
         },
+        lualine_z = {
+            {
+                session.status,
+                cond = function() return session.status ~= nil end
+            }
+
+        }
     }
 }
