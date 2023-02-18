@@ -2,6 +2,7 @@ local nls = require('null-ls')
 local lsp = require('lsp-zero')
 local sig = require('lsp_signature')
 local neo = require('neodev')
+local utl = require('lspconfig.util')
 
 lsp.preset('recommended')
 
@@ -25,6 +26,12 @@ lsp.configure('sumneko_lua', {
     }
 })
 
+lsp.configure('docker_compose_language_service', {
+    filetypes = { 'yaml.docker-compose' },
+    root_dir = utl.root_pattern { 'compose.yaml', 'docker-compose.yaml' },
+    telemetry = { enable = 'false' }
+})
+
 lsp.set_preferences({
     sign_icons = {
         error = 'E',
@@ -34,16 +41,11 @@ lsp.set_preferences({
     }
 })
 
-vim.diagnostic.config({
-    virtual_text = true,
-})
-
 nls.setup({
     sources = {
         nls.builtins.code_actions.shellcheck,
         nls.builtins.formatting.phpcbf,
         nls.builtins.formatting.shfmt,
-        nls.builtins.formatting.yamlfmt,
         nls.builtins.formatting.markdownlint,
     }
 })
@@ -54,3 +56,7 @@ sig.setup({
 
 neo.setup()
 lsp.setup()
+
+vim.diagnostic.config({
+    virtual_text = true,
+})

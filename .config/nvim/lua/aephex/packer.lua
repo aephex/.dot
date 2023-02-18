@@ -16,14 +16,22 @@ return require('packer').startup(function(use)
         }
     }
 
+
     -- Utilities
-    use { 'folke/which-key.nvim' }
-    use { 'mbbill/undotree' }
-    use { 'norcalli/nvim-colorizer.lua' }
-    use { 'tpope/vim-fugitive' }
-    use { 'kevinhwang91/rnvimr' }
     use { 'windwp/nvim-autopairs', config = function() require("nvim-autopairs").setup {} end }
+    use { 'norcalli/nvim-colorizer.lua' }
     use { 'AckslD/nvim-FeMaco.lua', config = 'require("femaco").setup()' }
+    use { 'tpope/vim-fugitive' }
+    use {
+        'gennaro-tedesco/nvim-possession',
+        requires = { 'ibhagwan/fzf-lua' },
+        run = ':!mkdir -p ~/.local/share/nvim/sessions'
+    }
+    use { 'kevinhwang91/rnvimr' }
+    use { 'mbbill/undotree' }
+    use { 'folke/which-key.nvim' }
+    use { 'nathom/filetype.nvim' }
+
 
     -- Statusline / Tabline
     use { 'nvim-lualine/lualine.nvim',
@@ -33,6 +41,7 @@ return require('packer').startup(function(use)
         }
     }
 
+
     -- Themes
     use { 'catppuccin/nvim', as = 'catppuccin' }
     use { 'folke/tokyonight.nvim', as = 'tokyonight' }
@@ -41,11 +50,11 @@ return require('packer').startup(function(use)
     use { 'embark-theme/vim', as = 'embark' }
     use { 'rose-pine/neovim', as = 'rose-pine' }
 
+
     -- LSP
     -- Treesitter; like DOM+magic for any document
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use { 'nvim-treesitter/playground' }
-
 
     -- LSP-Zero; because configuring things can be automatic
     use { 'VonHeikemen/lsp-zero.nvim',
